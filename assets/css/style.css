@@ -735,9 +735,9 @@ section .container {
   font-size: 14px;
   margin-bottom: 0;
 }
-#
+
 .services .icon-box:hover {
-  background: #FDA1A2; 
+  background: #042e5f;
   border-color: #12d640;
 }
 
@@ -758,8 +758,7 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Portfolio 
-# Portfolio background color
+# Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
