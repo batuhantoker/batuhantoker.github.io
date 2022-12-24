@@ -75,7 +75,13 @@ svg {
 }
 
 /*--------------------------------------------------------------
-# Header
+# Header#header {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    background-color: #FSE9BE;
+}
 --------------------------------------------------------------*/
 #header {
   transition: ease-in-out 0s;
@@ -85,6 +91,7 @@ svg {
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  /background-color: #dee2e6;
 }
 
 #header * {
@@ -305,7 +312,7 @@ svg {
   left: 0;
   top: 0;
   right: 0;
-  background: #09203a;
+  background: #1D1842;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -511,7 +518,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #09203a;
+  background: #1D1842;
   transition: ease-in-out 0.3s;
 }
 
@@ -684,7 +691,7 @@ section .container {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  background: #09203a;
+  background: #1D1842;
   padding: 40px 40px;
   transition: all ease-in-out 0.3s;
   margin: 10px;
@@ -739,7 +746,7 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #042e5f;
+  background: #ffffff; /* hover background color I guess markdown */
   border-color: #12d640;
 }
 
@@ -923,7 +930,7 @@ section .container {
   color: #444444;
   padding: 20px;
   width: 100%;
-  background: #09203a;
+  background: #ffffff; /* markdown 2 */
 }
 
 .contact .info-box i.bx {
@@ -978,7 +985,7 @@ section .container {
 
 .contact .php-email-form {
   padding: 30px;
-  background: #09203a;
+  background: #1D1842;
 }
 
 .contact .php-email-form .validate {
