@@ -746,7 +746,7 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: #ffffff; /* hover background color I guess markdown */
+  background: #000000; /* hover background color I guess markdown */
   border-color: #12d640;
 }
 
@@ -930,7 +930,7 @@ section .container {
   color: #444444;
   padding: 20px;
   width: 100%;
-  background: #ffffff; /* markdown 2 */
+  background: #1D1842; /* markdown 2 */
 }
 
 .contact .info-box i.bx {
