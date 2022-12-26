@@ -151,11 +151,25 @@
   fetch('https://api.github.com/users/batuhantoker/repos')
   .then(response => response.json()) // Parse the response as JSON
   .then(data => {
-    // Sort the repository data alphabetically by name
-    data.sort((a, b) => a.name.localeCompare(b.name));
-    // Get the placeholder element
-    const repoList = document.querySelector('#repo-list');
 
+     // Get the placeholder element
+  const repoList = document.querySelector('#repo-list');
+
+  // Clear the repository list
+  repoList.innerHTML = '';
+  const sortAlphabeticallyCheckbox = document.querySelector('#repo-list');
+  sortAlphabeticallyCheckbox.addEventListener('change', event => {
+    if (event.target.checked) {
+  // Sort the repository data alphabetically by name
+  data.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+  // Do not sort the repository data alphabetically
+  data = data.slice(); // Create a copy of the data array
+}
+
+// Update the repository list with the sorted data
+updateRepoList(data);
+});
     // Loop through the repository data and create a list item for each repository
     data.forEach(repo => {
       // Create the list item
@@ -202,4 +216,55 @@
     });
   });
 
+  function updateRepoList(data) {
+    // Get the placeholder element
+    const repoList = document.querySelector('#repo-list');
+  
+    // Clear the repository list
+    repoList.innerHTML = '';
+  
+    // Loop through the repository data and create a list item for each repository
+    data.forEach(repo => {
+      // Create the list item
+      const li = document.createElement('li');
+  
+      // Create the repository link
+      const link = document.createElement('a');
+      link.href = repo.html_url;
+      link.textContent = repo.name;
+  
+      // Add the link to the list item
+      li.appendChild(link);
+  
+      // Add a space between the repository name and the "More info" link
+      li.appendChild(document.createTextNode(' '));
+  
+      // Add the "More info" link, if a description exists
+      if (repo.description) {
+        const moreInfoLink = document.createElement('a');
+        moreInfoLink.href = '#';
+        moreInfoLink.style.marginLeft = '10px';
+        moreInfoLink.style.color = 'black';
+        moreInfoLink.textContent = '[More info]';
+          // Create the description element and hide it by default
+  const description = document.createElement('p');
+  description.textContent = repo.description;
+  description.style.display = 'none';
+
+  // Add the "More info" link and description to the list item
+  li.appendChild(moreInfoLink);
+  li.appendChild(description);
+
+  // Add an event listener to the "More info" link to toggle the description visibility
+  moreInfoLink.addEventListener('click', event => {
+    event.preventDefault();
+    description.style.display =
+      description.style.display === 'none' ? 'block' : 'none';
+  });
+}
+
+// Add the list item to the repository list
+repoList.appendChild(li);
+});
+}
 })(jQuery);
