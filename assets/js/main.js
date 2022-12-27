@@ -157,19 +157,7 @@
 
   // Clear the repository list
   repoList.innerHTML = '';
-  const sortAlphabeticallyCheckbox = document.querySelector('#repo-list');
-  sortAlphabeticallyCheckbox.addEventListener('change', event => {
-    if (event.target.checked) {
-  // Sort the repository data alphabetically by name
-  data.sort((a, b) => a.name.localeCompare(b.name));
-    } else {
-  // Do not sort the repository data alphabetically
-  data = data.slice(); // Create a copy of the data array
-}
-
-// Update the repository list with the sorted data
-updateRepoList(data);
-});
+    
     // Loop through the repository data and create a list item for each repository
     data.forEach(repo => {
       // Create the list item
@@ -192,7 +180,7 @@ updateRepoList(data);
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
         moreInfoLink.style.color = 'black';
-        moreInfoLink.textContent = '[More info]';
+        moreInfoLink.textContent = '[+ More info]';
 
         // Create the description element and hide it by default
         const description = document.createElement('p');
@@ -245,7 +233,7 @@ updateRepoList(data);
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
         moreInfoLink.style.color = 'black';
-        moreInfoLink.textContent = '[More info]';
+        moreInfoLink.textContent = '[+ More info]';
           // Create the description element and hide it by default
   const description = document.createElement('p');
   description.textContent = repo.description;
