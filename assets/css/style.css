@@ -54,14 +54,21 @@ img {
   -webkit-user-select: none;
   -webkit-touch-callout: none;
 }
-.bg {
-  background-color: #72685B;
-  }
+.image-container {
+  position: relative;
+  display: inline-block;
+}
 
-  .mask3 {
-    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
-    mask-image: radial-gradient(ellipse 90% 80% at 48% 78%, black 40%, transparent 50%);
-  }
+.image-container:after {
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 55%;
+bottom: 0;
+background: -webkit-linear-gradient(transparent, #FFF) left repeat;
+background: linear-gradient(transparent, #FFF) left repeat; 
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
