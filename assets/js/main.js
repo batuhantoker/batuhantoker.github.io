@@ -179,7 +179,7 @@
         const moreInfoLink = document.createElement('a');
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
-        moreInfoLink.style.color = 'black';
+        moreInfoLink.style.color = 'green';
         moreInfoLink.textContent = '[+ More info]';
 
         // Create the description element and hide it by default
@@ -232,7 +232,7 @@
         const moreInfoLink = document.createElement('a');
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
-        moreInfoLink.style.color = 'black';
+        moreInfoLink.style.color = 'green';
         moreInfoLink.textContent = '[+ More info]';
           // Create the description element and hide it by default
   const description = document.createElement('p');
