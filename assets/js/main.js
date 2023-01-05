@@ -167,7 +167,8 @@
       const link = document.createElement('a');
       link.href = repo.html_url;
       link.textContent = repo.name;
-
+      // Set the target attribute to "_blank"
+      link.target = "_blank";
       // Add the link to the list item
       li.appendChild(link);
 
@@ -180,6 +181,7 @@
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
         moreInfoLink.style.color = 'green';
+        moreInfoLink.style.fontWeight = 'bold'; // set fontWeight to 'bold'
         moreInfoLink.textContent = '[+ More info]';
 
         // Create the description element and hide it by default
@@ -233,6 +235,7 @@
         moreInfoLink.href = '#';
         moreInfoLink.style.marginLeft = '10px';
         moreInfoLink.style.color = 'green';
+        moreInfoLink.style.fontWeight = 'bold'; // set fontWeight to 'bold'
         moreInfoLink.textContent = '[+ More info]';
           // Create the description element and hide it by default
   const description = document.createElement('p');
