@@ -148,7 +148,7 @@
     $('.venobox').venobox();
   });
 
-  fetch('https://api.github.com/users/batuhantoker/repos')
+  fetch('https://api.github.com/users/batuhantoker/repos?page=1&per_page=1000')
   .then(response => response.json()) // Parse the response as JSON
   .then(data => {
 
