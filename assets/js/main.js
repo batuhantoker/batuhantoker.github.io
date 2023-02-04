@@ -167,6 +167,7 @@
       const link = document.createElement('a');
       link.href = repo.html_url;
       link.textContent = repo.name;
+      link.style.color = "#4C514B"; // set color of repo name to #4C514B
       // Set the target attribute to "_blank"
       link.target = "_blank";
       // Add the link to the list item
@@ -187,6 +188,7 @@
         // Create the description element and hide it by default
         const description = document.createElement('p');
         description.textContent = repo.description;
+        description.style.color = "#526664"; // set color of description to #526664
         description.style.display = 'none';
 
         // Add the "More info" link and description to the list item
@@ -221,8 +223,9 @@
       // Create the repository link
       const link = document.createElement('a');
       link.href = repo.html_url;
+      link.style.fontWeight = 'bold';
       link.textContent = repo.name;
-  
+      
       // Add the link to the list item
       li.appendChild(link);
   
